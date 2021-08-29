@@ -65,11 +65,10 @@ const greeting = (word) => {
 const speaker = (words, callback) => {
   const localArr = [];
   words.forEach((word) => {
-    localArr.push(callback(word))
-  })
-   
-  return localArr;
+    localArr.push(callback(word));
+  });
 
+  return localArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -89,11 +88,15 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  // Solution code here...
+  arr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
+  const localArr = arr;
+  for (let i = 0; i < times; i++) {
+    (callback(localArr, num));
+  }
+  return localArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -115,7 +118,14 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
+  const localArr =[]
+  availableItems.forEach((item)=>{
+    if (item.available){
+      localArr.push(item.name)
+      
+    }
+  })
+  return localArr
 };
 
 /* ------------------------------------------------------------------------------------------------
