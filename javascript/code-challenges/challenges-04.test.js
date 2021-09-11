@@ -5,14 +5,15 @@ CHALLENGE 1 - Review
 
 Write a function named addAnimal that takes in array of animals (strings) and some callback function.
 
-This function should first create a new array. Then iterate over the input array and modify each value based on the callback function provided.
+This function should first create a new array. Then iterate over the input array 
+and modify each value based on the callback function provided.
 
 Push each updated animal string into the new array. Return the new array.
 
 HINT: Look at the tests to see how the callback functions are used.
 
 ------------------------------------------------------------------------------------------------ */
-let testArr = ["test1", "TEST2", "teST3"];
+
 function upper(str) {
   return str.toUpperCase();
 }
@@ -20,10 +21,10 @@ function upper(str) {
 function lower(str) {
   return str.toLowerCase();
 }
-const update = (arr, callback) => {
+const updateAnimal = (arr, callback) => {
   
   let newArr = [];
-  arr.map((value) => newArr.push(callback(value)));
+  arr.forEach((value) => newArr.push(callback(value)));
   return newArr;
 };
 
