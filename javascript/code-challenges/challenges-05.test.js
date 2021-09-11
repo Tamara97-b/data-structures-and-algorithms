@@ -122,9 +122,6 @@ let starWarsData = [{
   gender: 'female'
 }];
 
-const returnNames = (arr) => {
-  // Solution code here...
-};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
