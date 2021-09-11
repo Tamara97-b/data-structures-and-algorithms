@@ -12,7 +12,8 @@ Note the space in between first and last names.
 You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = people => {
-  // Solution code here...
+  let arr1 = people.map(person => person.firstName + " " + person.lastName)
+  return arr1;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -21,9 +22,9 @@ CHALLENGE 2
 Write a function named addValues that, given an array of numbers as input, uses reduce to add the values in the array.
 
 ------------------------------------------------------------------------------------------------ */
-
 const addValues = (arr) => {
-  // Solution code here...
+  let sum = arr.reduce((accumulator, currentValue) => accumulator += currentValue, 0);
+    return sum
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -39,7 +40,8 @@ Write a function named addPurchases that, given an array of objects as input, us
 ------------------------------------------------------------------------------------------------ */
 
 const addPurchases = (arr) => {
-  // Solution code here...
+  let sum = arr.reduce((accumulator, currentValue) => accumulator += currentValue.purchasePrice, 0);
+  return sum
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -51,7 +53,8 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
-  // Solution code here...
+  let sum = arr.reduce((accumulator, currentValue) => currentValue ? accumulator +1:accumulator+0, 0);
+  return sum
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -59,6 +62,15 @@ CHALLENGE 5
 
 Write a function named returnNames that, given the Star Wars data, below, uses reduce to return an array containing the names of the characters.
 ------------------------------------------------------------------------------------------------ */
+const returnNames = (arr) => {
+  let sum = arr.reduce((accumulator, currentValue) =>
+  { accumulator.push(currentValue.name)
+  return accumulator
+  }, []);
+  return sum
+};
+
+
 
 let starWarsData = [{
   name: 'Luke Skywalker',
@@ -110,9 +122,6 @@ let starWarsData = [{
   gender: 'female'
 }];
 
-const returnNames = (arr) => {
-  // Solution code here...
-};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
